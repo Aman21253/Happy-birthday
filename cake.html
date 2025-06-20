@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎂 Cake Room 🎂</title>
+  <link rel="stylesheet" href="cake.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+
+<body class="cake-room">
+    <div class="balloons">
+        <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="balloon" style="left: 25%; animation-delay: 1.5s;"></div>
+        <div class="balloon" style="left: 40%; animation-delay: 2.5s;"></div>
+        <div class="balloon" style="left: 55%; animation-delay: 3s;"></div>
+        <div class="balloon" style="left: 70%; animation-delay: 2s;"></div>
+        <div class="balloon" style="left: 85%; animation-delay: 0.5s;"></div>
+      </div>
+  <div class="cake-container">
+    <div class="cake">
+      <div class="layer top"></div>
+      <div class="layer middle"></div>
+      <div class="layer bottom"></div>
+      <div class="candles">
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+      </div>
+    </div>
+    <button class="cut-button" onclick="cutCake()">🎂 Cut the Cake</button>
+  </div>
+
+  <div class="message-card hidden" id="card">
+    <h2>💌 Happy Birthday!</h2>
+    <p>Wishing you a day filled with love, cake, and laughter! 💖</p>
+  </div>
+
+  <script>
+    function cutCake() {
+    const card = document.getElementById('card');
+    card.classList.remove('hidden');
+    card.classList.add('show');
+
+    if (typeof confetti === 'function') {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+  }
+  </script>
+</body>
+</html>

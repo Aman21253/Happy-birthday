@@ -1,0 +1,73 @@
+body.message-journal {
+    margin: 0;
+    background: linear-gradient(to right, #fff0f5, #ffe4e1);
+    font-family: 'Pacifico', cursive;
+    color: #e75480;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .card-photo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .message h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ff69b4;
+  }
+  
+  .message p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .card-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:enabled {
+    transform: scale(1.05);
+  }
+  
+  /* Fade effect */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

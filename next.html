@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📖 Your Message Journal</title>
+  <link rel="stylesheet" href="next.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body class="message-journal">
+  <div class="card" id="card-box">
+    <div class="message" id="message-text">
+      <h2>🌸 Page 1</h2>
+      <p>You have a heart that's warm, kind, and full of love. Today we celebrate YOU – someone who makes this world a little more wonderful! 💖</p>
+    </div>
+    <div class="card-controls">
+      <button onclick="prevCard()" id="prevBtn" disabled>⬅️ Prev</button>
+      <button onclick="nextCard()" id="nextBtn">Next ➡️</button>
+    </div>
+  </div>
+
+  <script>
+    const messages = [
+      `<h2>🌸 Aman</h2>
+      <img src="b2.jpeg" alt="Memory Photo" class="card-photo">
+      <p>You have a heart that's warm, kind, and full of love. Today we celebrate YOU – someone who makes this world a little more wonderful! 💖</p>`,
+      `<h2>🎉 Page 2</h2><p>From your infectious laughter to your unshakable strength, you brighten the lives of everyone around you. Never forget how loved you are. 🌟</p>`,
+      `<h2>💫 Page 3</h2><p>Your presence brings peace, your smile brings light. I'm so lucky to know someone as genuine and thoughtful as you. 😊</p>`,
+      `<h2>🎁 Page 4</h2><p>I hope today wraps you in happiness like a warm hug — because you truly deserve all the joy this universe can give. 🌈</p>`,
+      `<h2>❤️ Page 5</h2><p>This is more than just a birthday. It’s a reminder of how cherished you are. Keep being your beautiful, unique, irreplaceable self. 💌</p>`
+    ];
+
+    let current = 0;
+    const messageText = document.getElementById("message-text");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    function updateCard() {
+      messageText.innerHTML = messages[current];
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === messages.length - 1;
+    }
+
+    function nextCard() {
+      if (current < messages.length - 1) {
+        current++;
+        updateCard();
+      }
+    }
+
+    function prevCard() {
+      if (current > 0) {
+        current--;
+        updateCard();
+      }
+    }
+    updateCard();
+  </script>
+</body>
+</html>

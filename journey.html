@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎀 Pick a Surprise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="birthday-bg">
+    <div class="balloons">
+        <div class="balloon" style="left: 7%;">H</div>
+        <div class="balloon" style="left: 13%;">A</div>
+        <div class="balloon" style="left: 19%;">P</div>
+        <div class="balloon" style="left: 25%;">P</div>
+        <div class="balloon" style="left: 31%;">Y</div>
+        <div class="balloon" style="left: 40%;">
+            <span class="heart">💖</span>
+          </div>
+        <div class="balloon" style="left: 49%;">B</div>
+        <div class="balloon" style="left: 55%;">I</div>
+        <div class="balloon" style="left: 61%;">R</div>
+        <div class="balloon" style="left: 67%;">T</div>
+        <div class="balloon" style="left: 73%;">H</div>
+        <div class="balloon" style="left: 79%;">D</div>
+        <div class="balloon" style="left: 85%;">A</div>
+        <div class="balloon" style="left: 91%;">Y</div>
+      </div>
+  <div class="overlay-box">
+    <h1> Where would you like to go?</h1>
+    <p>Pick your magical room ✨</p>
+
+    <div class="buttons-row">
+      <button onclick="goTo('cake.html')">🎂 Cake Room</button>
+      <button onclick="goTo('message.html')">💌 Message Card</button>
+      <button onclick="goTo('gift.html')">🎁 Surprise Gift</button>
+    </div>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body.gift-room {
+    margin: 0;
+    background: linear-gradient(to top right, #fdf2e9, #f6d6ff);
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .gift-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #ff69b4;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    text-align: center;
+  }
+  
+  .gift-box .lid {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #e75480;
+    border-radius: 10px 10px 0 0;
+    transition: transform 1s;
+    z-index: 2;
+  }
+  
+  .gift-box .base {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .gift-box .ribbon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 150px;
+    background: #fff;
+    transform: translateX(-50%);
+  }
+  
+  .gift-box .text {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    font-size: 1rem;
+    color: #ff69b4;
+    text-shadow: 0 0 3px #fff;
+  }
+  
+  .gift-box.open .lid {
+    transform: rotate(-45deg) translateY(-100px);
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .surprise {
+    background: white;
+    color: #ff69b4;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center;
+    width: 300px;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Fade effect */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .name-card {
+    background: #fff;
+    color: #e75480;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: slideUp 1s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

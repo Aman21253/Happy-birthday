@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎁 Your Surprise Gift 🎁</title>
+  <link rel="stylesheet" href="gift.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+
+<body class="gift-room">
+  <div class="gift-box" onclick="openGift()">
+    <div class="lid"></div>
+    <div class="base"></div>
+    <div class="ribbon"></div>
+    <div class="text">Click to Unwrap</div>
+  </div>
+
+  <div class="surprise hidden" id="surprise">
+    <h2>✨ Surprise! ✨</h2>
+    <p>You’ve unwrapped something really special. Here's a tiny piece of happiness, just for you. 💝</p>
+    <button onclick="goToNext()">Next Surprise ➡️</button>
+  </div>
+
+  <script>
+    function openGift() {
+      document.querySelector('.gift-box').classList.add('open');
+      document.getElementById('surprise').classList.remove('hidden');
+    }
+
+    function goToNext() {
+      window.location.href = "next.html";
+    }
+  </script>
+</body>
+</html>

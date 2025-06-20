@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💌 Your Birthday Message 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="message.css">
+</head>
+
+<body class="message-room">
+  <div class="message-card" id="card">
+    <h2>💌 Happy Birthday!</h2>
+    <p class="typed-message" id="typedText"></p>
+    <button onclick="goToNext()">🎁 Open Your Next Surprise</button>
+  </div>
+
+  <script>
+    const typedText = document.getElementById("typedText");
+    const message = "Some people walk into our lives and leave footprints on our hearts — you are one of them. Your presence brings light, laughter, and comfort in the most unexpected ways. You have this rare gift of making everyone feel special, valued, and loved. Today is a gentle reminder of how much you mean to me and to the world around you. You inspire with your strength, radiate with your kindness, and glow with your beautiful soul. May this day be filled with warmth, gentle surprises, and memories that stay forever. You truly deserve all the love life has to offer. 💖";
+    let index = 0;
+
+    function typeMessage() {
+      if (index < message.length) {
+        typedText.textContent += message.charAt(index);
+        index++;
+        setTimeout(typeMessage, 60);
+      }
+    }
+
+    function goToNext() {
+      window.location.href = "gift.html";
+    }
+
+    window.onload = typeMessage;
+  </script>
+</body>
+</html>

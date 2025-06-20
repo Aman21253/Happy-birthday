@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌟 Happy Birthday Portal 🌟</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="birthday-bg">
+    <div class="stage-curtains">
+  <div class="curtain left-curtain"></div>
+  <div class="curtain right-curtain"></div>
+</div>
+<div class="balloons">
+    <div class="balloon" style="left: 7%;">H</div>
+    <div class="balloon" style="left: 13%;">A</div>
+    <div class="balloon" style="left: 19%;">P</div>
+    <div class="balloon" style="left: 25%;">P</div>
+    <div class="balloon" style="left: 31%;">Y</div>
+    <div class="balloon" style="left: 40%;">
+        <span class="heart">💖</span>
+      </div>
+    <div class="balloon" style="left: 49%;">B</div>
+    <div class="balloon" style="left: 55%;">I</div>
+    <div class="balloon" style="left: 61%;">R</div>
+    <div class="balloon" style="left: 67%;">T</div>
+    <div class="balloon" style="left: 73%;">H</div>
+    <div class="balloon" style="left: 79%;">D</div>
+    <div class="balloon" style="left: 85%;">A</div>
+    <div class="balloon" style="left: 91%;">Y</div>
+  </div>
+  <div class="overlay-box">
+    <h1>🎉 Happy Birthday, Dear! 🎉</h1>
+    <p>Let’s begin your magical surprise journey! ✨</p>
+    <button onclick="goToNext()">Start the Magic 💖</button>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/12/20/audio_9d8c3e93c6.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function goToNext() {
+      window.location.href = "journey.html";
+    }
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.add("reveal");
+    }, 300); // wait 1s before starting curtain reveal
+  });
+  </script>
+</body>
+</html>

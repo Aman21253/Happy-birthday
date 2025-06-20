@@ -1,0 +1,67 @@
+body.message-room {
+    margin: 0;
+    background: linear-gradient(to top right, #fbc2eb, #a6c1ee);
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .message-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    color: #ff69b4;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .typed-message {
+    font-size: 1.4rem;
+    white-space: normal; /* Allow line breaks */
+    word-wrap: break-word;
+    overflow: hidden;
+    border-right: 2px solid #ff69b4;
+    animation: blink-caret 1s step-end infinite;
+  }
+  
+  button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  /* Typing cursor blink */
+  @keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #ff69b4; }
+  }
+  
+  /* Fade in card */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

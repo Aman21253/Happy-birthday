@@ -1,0 +1,162 @@
+body.cake-room {
+    margin: 0;
+    background: linear-gradient(to top right, #e2919a, #ffe4e1);
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 65px;
+    background: radial-gradient(circle at 30% 30%, #ffc7ea, #ff5fa2);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    opacity: 0.9;
+    animation: floatBalloon 4s ease-in infinite, sway 2s ease-in-out infinite alternate;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 18px;
+    background: #ff5fa2;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  @keyframes floatBalloon {
+    0% {
+      transform: translateY(0);
+      opacity: 0.8;
+    }
+    90% {
+      transform: translateY(-90vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-90vh);
+      opacity: 1;
+    }
+  }
+  
+  .cake-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .cake {
+    position: relative;
+    width: 150px;
+    margin: 0 auto;
+  }
+  
+  .layer {
+    height: 40px;
+    border-radius: 9px;
+    margin-bottom: 0px;
+  }
+  
+  .bottom {
+    background: #c87539;
+    width: 150px;
+  }
+  
+  .middle {
+    background: #f4a460;
+    width: 120px;
+    margin-left: 15px;
+  }
+  
+  .top {
+    background: #fff0f5;
+    width: 90px;
+    margin-left: 30px;
+  }
+  
+  .candles {
+    position: absolute;
+    top: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .flame {
+    width: 10px;
+    height: 20px;
+    background: rgb(117, 78, 10);
+    border-radius: 50% 50% 50% 50%;
+    animation: flicker 1s infinite;
+  }
+  
+  @keyframes flicker {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+  
+  .cut-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    background: #ff69b4;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+  }
+  
+  .cut-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .message-card {
+    background: white;
+    color: #ff69b4;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    text-align: center;
+    width: 300px;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
